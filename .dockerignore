@@ -1,0 +1,25 @@
+# Ignore version control directories
+.git/
+
+# Ignore all logs and temporary files
+*.log
+*.tmp
+
+# Ignore files related to development environments
+*.env
+.env
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore specific configuration files
+docker-compose.override.yml
+
+# Ignore build outputs
+build/
+dist/
+
+# Ignore test directories
+tests/
