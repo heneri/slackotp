@@ -140,7 +140,7 @@ def send_private_response(channel, user_id, message):
         return ('', 200)
     except SlackApiError as e:
         logging.error(f"Failed to send private message: {str(e)}")
-        return jsonify({'error': 'Failed to send private message', 'detail': str(e)}), 500
+        return jsonify({'error': 'Failed to send private message'}), 500
 
 
 def announce_in_channel(channel, message):
@@ -157,7 +157,7 @@ def announce_in_channel(channel, message):
         return ('', 200)
     except SlackApiError as e:
         logging.error(f"Failed to send public announcement: {str(e)}")
-        return jsonify({'error': 'Failed to send public announcement', 'detail': str(e)}), 500
+        return jsonify({'error': 'Failed to send public announcement'}), 500
 
 
 @app.route('/slack/command', methods=['POST'])
